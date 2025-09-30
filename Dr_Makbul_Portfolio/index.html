@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment + FAQ + Contact + Event Page</title>
+
+    <!-- ✅ Font Awesome 4.7.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #2d3fe0;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+      }
+      .nav-links li a:hover {
+        color: #2d3fe0;
+      }
+
+      /* Banner Section */
+      .banner {
+        background: #2d3fe0;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .banner h2 {
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .banner h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .banner p {
+        margin: 5px 0 20px;
+      }
+      .banner button {
+        background: white;
+        color: #2d3fe0;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      /* Appointment Section */
+      .appointment-section {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 40px 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        flex-wrap: wrap;
+        background: #fff;
+      }
+      .appointment-section img {
+        width: 450px;
+        object-fit: cover;
+        border-radius: 3px;
+      }
+      .form-box {
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .form-box h2 {
+        margin-bottom: 10px;
+      }
+      .form-box input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .form-box button {
+        width: 100%;
+        background: #2d3fe0;
+        color: white;
+        border: none;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        max-width: 900px;
+        margin: 50px auto;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        background: #cad5e9;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+      .faq-section .img img {
+        max-width: 450px;
+      }
+      .questions h1 {
+        margin-bottom: 20px;
+      }
+      .question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(90, 90, 90);
+      }
+      .question img {
+        width: 14px;
+        transition: transform 0.3s;
+      }
+      .answer {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #555;
+      }
+      hr {
+        border: none;
+        border-bottom: 1px solid #eee;
+        margin: 10px 0;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        margin: 50px auto;
+        max-width: 1000px;
+      }
+      .contact-info {
+        flex: 1;
+        background: #2d3fe0;
+        color: #ffffff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .contact-info h2 {
+        margin-bottom: 15px;
+      }
+      .contact-info .info-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 12px;
+        border-radius: 6px;
+        margin: 15px 0;
+        font-size: 14px;
+      }
+      .contact-info .info-box i {
+        background: #fff;
+        color: #2d3fe0;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+        min-width: 40px;
+        text-align: center;
+      }
+      .contact-info a {
+        color: #fff;
+        text-decoration: none;
+      }
+      /* Follow Us Section */
+      .follow-us {
+        margin-top: 25px;
+      }
+      .follow-us h3 {
+        margin-bottom: 10px;
+      }
+      .social-icons a {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      .social-icons i {
+        background: #fff;
+        color: #2d3fe0;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+      .social-icons i:hover {
+        background: #0000cc;
+        color: #fff;
+      }
+
+      .contact-form {
+        flex: 1.5;
+        background: #b6c6ff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .contact-form h2 {
+        color: #004d40;
+        margin-bottom: 15px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+      }
+      .contact-form button {
+        margin-top: 15px;
+        background: #2d3fe0;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .contact-form button:hover {
+        background: #0000cc;
+      }
+
+      /* Events */
+      .events-section {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 40px;
+        background: #779fd5;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+      .events-section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2d3fe0;
+      }
+      .event-card {
+        background: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-left: 5px solid #2d3fe0;
+        border-radius: 6px;
+      }
+      .event-card h3 {
+        margin: 0;
+        color: #333;
+      }
+      .event-card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* Footer */
+      .footer {
+        background: #111;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+      }
+      .footer h3 {
+        margin-bottom: 15px;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer ul li {
+        margin: 5px 0;
+      }
+      .footer ul li a {
+        color: #bbb;
+        text-decoration: none;
+      }
+      .footer ul li a:hover {
+        color: #fff;
+      }
+      .schedule-box {
+        background: #222;
+        padding: 20px;
+        border-radius: 6px;
+        text-align: center;
+        width: 280px;
+      }
+      .schedule-box p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+      .schedule-box button {
+        background: #2d3fe0;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 15px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .schedule-box button:hover {
+        background: #0000cc;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">DR Md. Mokbul Hossen</div>
+      <ul class="nav-links">
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#events">Event</a></li>
+      </ul>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+      <h2>Need an appointment For a Check-Up?</h2>
+      <h1>Just make an Appointment</h1>
+      <p>Call us at: +880 1782662665</p>
+      <button>GET AN APPOINTMENT</button>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment-section">
+      <img src="./images/GST CAM 939-10.jpg" alt="Appointment" />
+      <div class="form-box">
+        <h2>Make an Appointment</h2>
+        <p>Make an appointment by just filling out this form</p>
+        <form>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone" required />
+          <input type="date" required />
+          <input type="time" required />
+          <button type="submit">Book Appointment</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="img">
+        <img src="./images/illustration-woman-online-desktop.svg" alt="" />
+      </div>
+      <div class="questions">
+        <h1>FAQ</h1>
+        <div>
+          <h3 class="question">
+            What age group of children does Dr. Md. Mokbul Hosen treat?
+            <img src="./images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <p class="answer">
+            Dr. Mokbul Hossen provides medical care for newborns, infants,
+            toddlers, and children up to 18 years of age.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3 class="question">
+            Do I need to book an appointment in advance?
+            <img src="./images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <p class="answer">
+            Yes, it is recommended to book an appointment in advance to avoid
+            waiting. You can schedule easily through the Appointment page or by
+            contacting the clinic directly.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3 class="question">
+            Does doctor provide vaccination and immunization services?
+            <img src="./images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <p class="answer">
+            Absolutely. Dr. Mokbul Hossen ensures that children receive all
+            essential vaccinations and provides parents with updated
+            immunization schedules.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3 class="question">
+            How can I prepare my child for their first visit?
+            <img src="./images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <p class="answer">
+            Bring your child’s medical records, vaccination card, and a list of
+            any ongoing health issues. Keeping your child calm with their
+            favorite toy or book is also helpful.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3 class="question">
+            Does doctor offer consultation for child nutrition and growth?
+            <img src="./images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <p class="answer">
+            Yes. Dr. Hossen guides parents on proper nutrition, growth
+            milestones, and early detection of developmental concerns.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h3 class="question">
+            Do you provide additional support?
+            <img src="./images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <p class="answer">
+            Call and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-info">
+        <h2>Contact Us!</h2>
+        <p>Book an Appointment by visiting or a call!</p>
+        <hr style="border: 0; border-top: 1px solid #fff; margin: 20px 0" />
+
+        <!-- Address -->
+        <div class="info-box">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <div>
+            <strong>Dr. MD Mokbul Hossen</strong><br />
+            Nasirnagar Morden Hospital, Brahmanbaria
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="info-box">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <div>
+            <a href="mailto:drmmhumukul@gmail.com">drmmhmukul@gmail.com</a
+            ><br />
+            Need support? Drop us an email
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="info-box">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <div>
+            +880 1782662665<br />
+            Have a question? Call us now
+          </div>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="follow-us">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/DrMakbul/"
+              ><i class="fa fa-facebook-official" aria-hidden="true"></i
+            ></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"
+              ><i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <p style="font-size: 12px; color: #888">YOU CAN REACH US</p>
+        <h2>Get In Touch</h2>
+        <form>
+          <input type="text" placeholder="Your Name" />
+          <input type="text" placeholder="Cell Phone" />
+          <input type="email" placeholder="Email" />
+          <input type="text" placeholder="Subject" />
+          <textarea rows="4" placeholder="Message"></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="events-section">
+      <h2>Upcoming Medical Events</h2>
+
+      <div class="event-card">
+        <h3>Free Health Camp - Nasirnagar Morden Hospital</h3>
+        <p><strong>Date:</strong> 15th October 2025</p>
+        <p>
+          <strong>Location:</strong> Nasirnagar Morden Hospital, Brahmanbaria
+        </p>
+        <p>Join Dr. MD Mokbul for a free health check-up and consultation.</p>
+      </div>
+
+      <div class="event-card">
+        <h3>ChildCare Awareness Seminar</h3>
+        <p><strong>Date:</strong> 25th October 2025</p>
+        <p><strong>Location:</strong> Brahmanbaria Community Hall</p>
+        <p>
+          Learn about managing ChildCare with lifestyle tips and medical advice.
+        </p>
+      </div>
+
+      <div class="event-card">
+        <h3>Children Health Workshop</h3>
+        <p><strong>Date:</strong> 5th November 2025</p>
+        <p><strong>Location:</strong> Home Clinic, Brahmanbaria</p>
+        <p>
+          A workshop on preventive measures and care for children-related
+          issues.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#appointment">Book Appointment</a></li>
+          <li><a href="#event">Up Coming Event</a></li>
+          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="schedule-box">
+        <h3>Working Hours</h3>
+        <p><strong>NASIRNAGAR HOSPITAL:</strong> 10:00 am – 01:00 pm</p>
+        <p>
+          <strong>HOME CLINIC [saturday - Thursday]:</strong> 02:30 pm – 08:00
+          pm
+        </p>
+        <p><strong>HOME CLINIC [Friday]:</strong> 09:00 am and 08:00 pm</p>
+        <a href="#contact"><button>CONTACT US</button></a>
+      </div>
+    </footer>
+
+    <script>
+      const answers = document.querySelectorAll(".answer");
+      const arrowIcons = document.querySelectorAll(".question img");
+      const faqSection = document.querySelector(".faq-section");
+
+      answers.forEach((answer) => (answer.style.display = "none"));
+
+      faqSection.addEventListener("click", (e) => {
+        arrowIcons.forEach((arrow) => {
+          if (e.target === arrow) {
+            answers.forEach((answer) => {
+              if (
+                answer.parentElement === e.target.parentElement.parentElement
+              ) {
+                if (answer.style.display === "none") {
+                  arrow.style.transform = "rotate(180deg)";
+                  answer.style.display = "block";
+                  e.target.parentElement.style.color = "crimson";
+                } else if (answer.style.display === "block") {
+                  arrow.style.transform = "rotate(0)";
+                  answer.style.display = "none";
+                  e.target.parentElement.style.color = "rgb(90, 90, 90)";
+                }
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
