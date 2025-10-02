@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Services & Charity</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/ome.css">
+  <link rel="stylesheet" href="assets/ipti.css">
+  <link rel="stylesheet" href="assets/maliha.css">
+</head>
+</head>
+<body>
+
+<!-- Header -->
+  <header>
+    <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <!-- Services Section -->
+  <section>
+    <h2>Services</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="image/kids-arthritis-1200x630 (1).webp" alt="Arthritis in Children">
+        <div class="card-content">
+          <h3>Arthritis in Children</h3>
+        <a href="#">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="image/download.jpg" alt="Asthma in Children">
+        <div class="card-content">
+          <h3>Asthma in Children</h3>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="image/1632287811juv.webp" alt="Auto-immune Diseases">
+        <div class="card-content">
+          <h3>Auto-immune Diseases in Children</h3>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="image/download (1).jpg" alt="Behaviour Problem">
+        <div class="card-content">
+          <h3>Behaviour problem in children</h3>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="image/child-behavior-disorders.jpg" alt="Behavioural Disorders">
+        <div class="card-content">
+          <h3>Behavioural Disorders in Children</h3>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="image/images.jpg" alt="Blood disorders">
+        <div class="card-content">
+          <h3>Blood disorders in children</h3>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Where footer will appear -->
+<div id="footer"></div>
+
+<!-- Load footer.html -->
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>

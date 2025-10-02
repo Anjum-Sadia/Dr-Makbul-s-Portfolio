@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/ome.css">
+  <link rel="stylesheet" href="assets/ipti.css">
+  <link rel="stylesheet" href="assets/maliha.css">
+</head>
+<body>
+  
+<!-- Header -->
+  <header>
+    <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <!-- Charity Section -->
+  <section>
+    <h2>Charity</h2>
+    <div class="grid">
+      <!-- Charity Card 1 -->
+      <div class="card">
+        <img src="image/childhealth found.jpeg" alt="Child Healthcare Fund">
+        <div class="card-content">
+          <h3>Child Healthcare Fund</h3>
+          <a href="#">Donate Now →</a>
+        </div>
+      </div>
+
+      <!-- Charity Card 2 -->
+      <div class="card">
+        <img src="image/education.jpeg" alt="Education for All">
+        <div class="card-content">
+          <h3>Education for All</h3>
+          <a href="#">Donate Now →</a>
+        </div>
+      </div>
+
+      <!-- Charity Card 3 -->
+      <div class="card">
+        <img src="image/food.jpeg" alt="Food & Nutrition Program">
+        <div class="card-content">
+          <h3>Food & Nutrition Program</h3>
+          <a href="#">Donate Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Where footer will appear -->
+<div id="footer"></div>
+
+<!-- Load footer.html -->
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>

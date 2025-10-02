@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/ome.css">
+  <link rel="stylesheet" href="assets/ipti.css">
+  <link rel="stylesheet" href="assets/maliha.css">
+</head>
+<body>
+  
+<!-- Header -->
+  <header>
+   <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+    <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>ABOUT</h2>
+      <p>
+        I am Dr. Md. Mokbul Hossain, currently serving as Consultant Pediatric Cardiologist at Evercare Hospital. Over the years, I have treated countless patients with a commitment to advanced medical practice, research, and patient well-being.
+      </p>
+
+      <div class="credentials">
+        <h3>Education & Credentials</h3>
+        <p>MBBS CMC<br>MD BMU</p>
+        <p>
+          Professor Dr. Md. Mokbul Hossain is a child specialist, neonatologist, and pediatric cardiologist from Bangladesh. He has professional practices expanding over a wide area of child health that includes newborn health, childhood illness, neonatal and pediatric emergencies, neonatal and pediatric echocardiography. He has years of experience in treating newborn and children.
+        </p>
+      </div>
+
+      <div class="philosophy">
+        <h3>Philosophy of Care</h3>
+        <p>
+          I believe in treating not just the illness but the person as a whole—listening, understanding, and providing guidance throughout the journey to recovery.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-img">
+      <img src="image/dr2.jpg" alt="Dr. Md. Makbul Hossain">
+    </div>
+  </section>
+  
+ <!-- Where footer will appear -->
+<div id="footer"></div>
+
+<!-- Load footer.html -->
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>
+  

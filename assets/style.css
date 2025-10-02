@@ -1,0 +1,193 @@
+/* =====================================================
+   GLOBAL STYLES (Shared across all pages)
+===================================================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+h2 {
+  color: #0b0b64;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =====================================================
+   HEADER & NAVBAR (Shared + Hover Effects)
+===================================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #0b0b64; /* Navy blue */
+  color: white;
+}
+
+header h1 a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header h1 a:hover {
+  transform: scale(1.15) rotate(-3deg);
+  color: #eeede7; /* Gold color on hover */
+}
+
+header nav a {
+  color: white;
+  margin-left: 25px;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Animated underline for nav links */
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #eeebdd;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+header nav a:hover {
+  transform: translateY(-5px) scale(1.05);
+  color: #e4e2d8;
+  text-shadow: 0 0 8px #e9e6d9, 0 0 12px #fff;
+}
+
+
+
+/* =====================================================
+   FOOTER (Shared / Enhanced Premium Look)
+===================================================== */
+.footer {
+  background: linear-gradient(135deg, #0b0b64, #222288);
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Logo Section */
+.footer-logo img {
+  width: 120px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+.footer-logo h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #e2e1d8;
+}
+
+.footer-logo p {
+  line-height: 1.5;
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* Contact Section */
+.footer-contact h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #c9c7bd;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a {
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #c7c6c2;
+  transform: translateX(5px);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* =====================================================
+   RESPONSIVE - HEADER & NAVBAR (Shared)
+===================================================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  header nav a {
+    margin-left: 10px;
+  }
+}
+
+
+
+/* =====================================================
+   RESPONSIVE - FOOTER (Shared)
+===================================================== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin-bottom: 20px;
+  }
+
+  .footer-logo h3, .footer-contact h3 {
+    font-size: 18px;
+  }
+}
