@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Dr. Md Makbul Hossain</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/ome.css">
+  <link rel="stylesheet" href="assets/ipti.css">
+  <link rel="stylesheet" href="assets/maliha.css">
+</head>
+<body class="contact-page">
+
+  <!-- Header -->
+  <header>
+    <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>If you have any questions or want to book an appointment, please reach out using the form below.</p>
+
+    <!-- Form Box -->
+    <div class="form-box">
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Map -->
+    <div class="map-container">
+      <h3>Find Me Here</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902082825345!2d90.39104801536117!3d23.75088569461574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8af9f2640f1%3A0x123456789abcdef!2sYour%20Hospital%20Location!5e0!3m2!1sen!2sbd!4v1696244052648!5m2!1sen!2sbd" 
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Where footer will appear -->
+<div id="footer"></div>
+
+<!-- Load footer.html -->
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/ome.css">
+  <link rel="stylesheet" href="assets/ipti.css">
+  <link rel="stylesheet" href="assets/maliha.css">
+
+</head>
+<body>
+
+
+  
+<!-- Header -->
+  <header>
+    <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Doctor Info -->
+    <div class="doctor-info">
+      <div class="doctor-details">
+        <h2>Child Disease Specialist</h2>
+        <p>Serving at Evercare Hospital, Dhaka <br>
+        Specialist in Pediatric Cardiology, Neonatology, and Child Health.</p>
+      </div>
+      <img src="./assets/dr2.jpg" alt="Dr. Md Makbul Hossain">
+    </div>
+
+    <!-- Chamber Schedule -->
+    <div class="schedule">
+      <h3>Chamber Schedule</h3>
+      <p><span class="highlight">Saturday – Thursday:</span> 2:30 PM – 8:00 PM</p>
+      <p><span class="highlight">Friday:</span> 9:00 AM – 8:00 PM</p>
+    </div>
+
+    <!-- Chamber Location -->
+    <div class="schedule">
+      <h3>Chamber Address</h3>
+      <p><span class="highlight">Nasirnagar Modern Hospital</span> <br>
+        2nd Floor, Room No: 211 <br>
+        Nasirnagar Sadar, Brahmanbaria
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact">
+      <h3>For Serial / Appointment</h3>
+      <p><span class="highlight"><img src="./assets/call.png" alt="call"></span> 01782-662 665</p>
+      <p><span class="highlight"><img src="./assets/whatsapp2.png" alt="whatsapp"></span> 01782-662 665</p>
+      <p><span class="highlight"><img src="./assets/email.png" alt="email"></span> drmmhmukul@gmail.com</p>
+    </div>
+    
+ <!-- Where footer will appear -->
+<div id="footer"></div>
+
+<!-- Load footer.html -->
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+  </body>
+  </html>
