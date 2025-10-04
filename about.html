@@ -1,67 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/ome.css">
-  <link rel="stylesheet" href="assets/ipti.css">
-  <link rel="stylesheet" href="assets/maliha.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dr. Md Makbul Hossain</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS (Must be last) -->
+  <link rel="stylesheet" href="./assets/ome.css">
 </head>
 <body>
-  
-<!-- Header -->
-  <header>
-   <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="service.html">Services</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-    <!-- About Section -->
-  <section class="about" id="about">
-    <div class="about-text">
-      <h2>ABOUT</h2>
-      <p>
-        I am Dr. Md. Mokbul Hossain, currently serving as Consultant Pediatric Cardiologist at Evercare Hospital. Over the years, I have treated countless patients with a commitment to advanced medical practice, research, and patient well-being.
-      </p>
 
-      <div class="credentials">
-        <h3>Education & Credentials</h3>
-        <p>MBBS CMC<br>MD BMU</p>
-        <p>
-          Professor Dr. Md. Mokbul Hossain is a child specialist, neonatologist, and pediatric cardiologist from Bangladesh. He has professional practices expanding over a wide area of child health that includes newborn health, childhood illness, neonatal and pediatric emergencies, neonatal and pediatric echocardiography. He has years of experience in treating newborn and children.
-        </p>
+  <!-- Top Bar -->
+  <div id="top-bar" class="d-none d-md-block">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="bi bi-telephone-fill me-2"></i><a href="tel:+8801782662665">01782-662 665</a>
+        <span class="mx-2">|</span>
+        <i class="bi bi-envelope-fill me-2"></i><a href="mailto:drmmhmukul@gmail.com">drmmhmukul@gmail.com</a>
       </div>
-
-      <div class="philosophy">
-        <h3>Philosophy of Care</h3>
-        <p>
-          I believe in treating not just the illness but the person as a whole—listening, understanding, and providing guidance throughout the journey to recovery.
-        </p>
+      <div>
+        <i class="bi bi-geo-alt-fill me-2"></i> Nasirnagar Modern Hospital, Brahmanbaria
       </div>
     </div>
+  </div>
 
-    <div class="about-img">
-      <img src="image/dr2.jpg" alt="Dr. Md. Makbul Hossain">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-heart-pulse-fill text-primary me-2"></i>Dr. Md Makbul Hossain
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+           <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3 px-3 py-2 text-white mt-2 mt-lg-0" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container" data-aos="fade-in">
+      <h1>About Me</h1>
+      <p>My Journey, Expertise, and Commitment to Pediatric Care</p>
+    </div>
+  </header>
+
+  <!-- Main About Section -->
+  <section id="about" class="page-section bg-pattern">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <!-- Replace with a high-quality, professional photo -->
+          <img src="./image/dr1.jpg" alt="Dr. Md Makbul Hossain" class="img-fluid about-img">
+        </div>
+        <div class="col-lg-7 about-content" data-aos="fade-left">
+          <h3>Dr. Md Makbul Hossain</h3>
+          <span class="credentials">MBBS, MD (Pediatrics), FCPS (Pediatric Cardiology)</span>
+          <p>With over 15 years of dedicated experience in pediatric medicine, my mission is to provide the highest standard of care for children's heart health. I believe in a holistic approach that combines state-of-the-art medical technology with compassionate, family-centered communication.</p>
+          <p>My journey has been driven by a passion for helping the most vulnerable patients, ensuring every child has the opportunity for a healthy and fulfilling life. I am committed to continuous learning and applying the latest advancements in pediatric cardiology.</p>
+          <ul>
+            <li><i class="bi bi-check2-circle"></i><strong>Expertise in Echocardiography:</strong> Utilizing advanced imaging to accurately diagnose complex heart conditions.</li>
+            <li><i class="bi bi-check2-circle"></i><strong>NICU Specialist:</strong> Proficient in critical care for newborns with congenital heart defects.</li>
+            <li><i class="bi bi-check2-circle"></i><strong>Long-Term Management:</strong> Focused on comprehensive care plans for chronic pediatric heart conditions.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
-  
- <!-- Where footer will appear -->
-<div id="footer"></div>
 
-<!-- Load footer.html -->
-<script>
-  fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
+  <!-- My Approach to Care Section -->
+ <section id="approach" class="page-section bg-pattern">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Approach to Care</h2>
+        <p>My practice is built on three core principles to ensure the best outcomes for my patients and their families.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="approach-card">
+            <div class="icon"><i class="bi bi-people"></i></div>
+            <h4>Patient-Centered Care</h4>
+            <p>Every child is unique. I tailor treatment plans to the specific needs of the patient, ensuring their comfort and well-being are always the top priority.</p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="approach-card">
+            <div class="icon"><i class="bi bi-cpu"></i></div>
+            <h4>Advanced Technology</h4>
+            <p>Leveraging the latest diagnostic tools and medical technologies allows for more accurate diagnoses and effective, minimally invasive treatments.</p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="approach-card">
+            <div class="icon"><i class="bi bi-shield-check"></i></div>
+            <h4>Family Partnership</h4>
+            <p>I believe in working closely with parents and guardians, keeping them informed and involved in every step of the decision-making process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="container">
+        <div data-aos="zoom-in">
+            <h3>Ready to Discuss Your Child's Health?</h3>
+            <p class="lead my-3">I am here to provide the expert care and peace of mind you deserve. Reach out to schedule a consultation.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Book an Appointment</a>
+        </div>
+    </div>
+  </section>
+
+
+  <!--footer-->
+<footer>
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- Column 1: About Doctor -->
+        <div class="col-lg-5 col-md-12">
+          <h5>Dr. Md Makbul Hossain</h5>
+          <p>
+            Specialist in Pediatric Cardiology & Neonatology, providing <br>compassionate and expert care for your little ones' hearts.
+          </p>
+          <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/DrMakbul/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/8801782662665" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact & Location -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Contact & Location</h5>
+          <ul class="list-unstyled">
+            <li class="d-flex">
+              <i class="bi bi-geo-alt-fill me-3 mt-1" style="flex-shrink: 0;"></i>
+              <span><strong>Nasirnagar Modern Hospital</strong><br>Bachchalla, Hospital Road, Nasirnagar Sadar, Brahmanbaria</span>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-telephone-fill me-3 mt-1" style="flex-shrink: 0;"></i>
+              <a href="tel:+8801782662665">01782-662 665</a>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-envelope-fill me-3 mt-1" style="flex-shrink: 0;"></i>
+              <a href="mailto:drmmhmukul@gmail.com">drmmhmukul@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+    
+    <!-- Copyright Sub-footer -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Dr. Md Makbul Hossain | All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      once: true
     });
-</script>
+  </script>
+
 </body>
 </html>
-  
