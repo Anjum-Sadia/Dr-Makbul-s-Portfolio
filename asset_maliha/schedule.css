@@ -1,0 +1,202 @@
+/* ============================
+   General Page Styling
+============================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f8fc;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 950px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ============================
+   Header Styling
+============================ */
+header {
+  background-color: #0b0b64;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  border-bottom: 5px solid #050547;
+  position: relative;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background-color: #0b0b64;
+  color: white;
+  font-size: 18px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   Doctor Info
+============================ */
+.doctor-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.doctor-info img {
+  width: 280px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.doctor-info img:hover {
+  transform: scale(1.05);
+}
+
+.doctor-details h2 {
+  color: #0b0b64;
+  margin-bottom: 10px;
+}
+
+.doctor-details p {
+  color: #555;
+}
+
+/* ============================
+   Info Boxes (Schedule / Address / Contact)
+============================ */
+.schedule, .contact {
+  background: #eaf3ff;
+  border-left: 6px solid #0b0b64;
+  padding: 25px 22px;
+  margin: 25px 0;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.schedule:hover,
+.contact:hover,
+.active-schedule {
+  background: #d5dcff;
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.schedule h3,
+.contact h3 {
+  color: #0b0b64;
+  margin-top: 0;
+}
+
+.contact p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.contact img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.highlight {
+  color: #0b0b64;
+  font-weight: 600;
+}
+
+/* ============================
+   Footer
+============================ */
+.footer {
+  text-align: center;
+  background: #0b0b64;
+  color: white;
+  padding: 18px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 4px solid #050547;
+}
+
+/* ============================
+   Responsive Layout
+============================ */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .doctor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .doctor-info img {
+    width: 200px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav.mobile-nav-open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
