@@ -4,30 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/ome.css">
   <link rel="stylesheet" href="assets/ipti.css">
   <link rel="stylesheet" href="assets/maliha.css">
+  <link rel="stylesheet" href="assets/header.css">
+  <link rel="stylesheet" href="assets/footer.css">
 </head>
 <body>
   
-<!-- Header -->
-  <header>
-    <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
+  <!-- ✅ Top Bar -->
+  <div id="top-bar" class="d-none d-md-block">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="bi bi-telephone-fill me-2"></i><a href="tel:+8801782662665">01782-662 665</a>
+        <span class="mx-2">|</span>
+        <i class="bi bi-envelope-fill me-2"></i><a href="mailto:drmmhmukul@gmail.com">drmmhmukul@gmail.com</a>
+      </div>
+      <div>
+        <i class="bi bi-geo-alt-fill me-2"></i> Nasirnagar Modern Hospital, Brahmanbaria
+      </div>
+    </div>
+  </div>
 
-    <nav>
-      <a href="about.html">About</a>
-      <a href="service.html">Services</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  
-  <!-- Charity Section -->
+  <!-- ✅ Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-heart-pulse-fill text-primary me-2"></i>Dr. Md Makbul Hossain
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary ms-lg-3 px-3 py-2 text-white mt-2 mt-lg-0" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ✅ Your Main Content (Charity, Testimonials, Events, etc.) -->
   <section>
-    <h2>Charity</h2>
-    <div class="grid">
+    <h2 style="color: rgb(2, 18, 99);" >Charity</h2>
+    <div class="scrollable-grid">
       <!-- Charity Card 1 -->
       <div class="card">
         <img src="image/childhealth found.jpeg" alt="Child Healthcare Fund">
@@ -56,17 +91,156 @@
       </div>
     </div>
   </section>
-  
- <!-- Where footer will appear -->
-<div id="footer"></div>
 
-<!-- Load footer.html -->
-<script>
-  fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2 style="color: rgb(2, 18, 99);">Impact Stories</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Thanks to your support, I could attend school and improve my life!"</p>
+        <h4>- Sarah, Age 10</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Your donations helped feed my family during hard times."</p>
+        <h4>- Ahmed, Father of 3</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit Your Experience -->
+  <section id="submit-testimonial">
+    <h2 style="color: rgb(3, 51, 106);"> Share Your Experience</h2>
+    <form id="testimonial-form">
+      <input type="text" id="reviewer-name" placeholder="Your Name" required>
+      <textarea id="review-text" placeholder="Write your experience here..." rows="4" required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  <!-- Volunteer Splash Button -->
+  <section id="volunteer-splash">
+    <button id="join-btn">Join as Volunteer</button>
+  </section>
+
+  <!-- Volunteer Form Modal -->
+  <div id="volunteer-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Join Our Volunteer Team</h2>
+      <form id="volunteer-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Events -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-slider">
+      <div class="event-card">
+        <div class="event-card-content">
+          <h3>Food Distribution</h3>
+          <p>12th Oct 2025 | Community Center</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-card-content">
+          <h3>School Supplies Drive</h3>
+          <p>25th Nov 2025 | Downtown Library</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats">
+    <h2>Our Achievements</h2>
+    <div class="stats-grid">
+      <div><h3>1200+</h3><p>Children Helped</p></div>
+      <div><h3>500+</h3><p>Meals Served</p></div>
+      <div><h3>300+</h3><p>Volunteers</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <button class="faq-question">How can I donate?</button>
+      <div class="faq-answer">You can donate via our 'Donate Now' button on charity cards.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I volunteer?</button>
+      <div class="faq-answer">Yes, sign up using our Volunteer form above!</div>
+    </div>
+  </section>
+
+
+  <!-- ✅ Footer -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- Column 1: About Doctor -->
+        <div class="col-lg-5 col-md-12">
+          <h5>Dr. Md Makbul Hossain</h5>
+          <p>
+            Specialist in Pediatric Cardiology & Neonatology, providing <br>compassionate and expert care for your little ones' hearts.
+          </p>
+          <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/DrMakbul/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/8801782662665" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact & Location -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Contact & Location</h5>
+          <ul class="list-unstyled">
+            <li class="d-flex">
+              <i class="bi bi-geo-alt-fill me-3 mt-1"></i>
+              <span><strong>Nasirnagar Modern Hospital</strong><br>Bachchalla, Hospital Road, Nasirnagar Sadar, Brahmanbaria</span>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-telephone-fill me-3 mt-1"></i>
+              <a href="tel:+8801782662665">01782-662 665</a>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-envelope-fill me-3 mt-1"></i>
+              <a href="mailto:drmmhmukul@gmail.com">drmmhmukul@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+    
+    <!-- Copyright Sub-footer -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Dr. Md Makbul Hossain | All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/ipti.js"></script>
 </body>
 </html>
