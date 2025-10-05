@@ -3,25 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Dr. Md Makbul Hossain</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/ome.css">
-  <link rel="stylesheet" href="assets/ipti.css">
-  <link rel="stylesheet" href="assets/maliha.css">
+  <title>Dr. Md Makbul Hossain</title>
+  <link rel="icon" type="image/png" href="./image/dr1.jpg">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS (Must be last) -->
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
+<body>
 <body class="contact-page">
 
-  <!-- Header -->
-  <header>
-    <h1><a href="index.html">Dr. Md Makbul Hossain</a></h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="service.html">Services</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  
+  <!-- Top Bar -->
+  <div id="top-bar" class="d-none d-md-block">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="bi bi-telephone-fill me-2"></i><a href="tel:+8801782662665">01782-662 665</a>
+        <span class="mx-2">|</span>
+        <i class="bi bi-envelope-fill me-2"></i><a href="mailto:drmmhmukul@gmail.com">drmmhmukul@gmail.com</a>
+      </div>
+      <div>
+        <i class="bi bi-geo-alt-fill me-2"></i> Nasirnagar Modern Hospital, Brahmanbaria
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-heart-pulse-fill text-primary me-2"></i>Dr. Md Makbul Hossain
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3 px-3 py-2 text-white mt-2 mt-lg-0" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 <!-- Contact Section -->
 <section class="contact-section">
   <div class="container">
@@ -35,36 +69,96 @@
         <input type="email" name="email" placeholder="Your Email" required>
         <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <center><button type="submit" class="btn">Send Message</button></center>
       </form>
     </div>
 
     <!-- Map -->
-    <div class="map-container">
-      <h3>Find Me Here</h3>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902082825345!2d90.39104801536117!3d23.75088569461574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8af9f2640f1%3A0x123456789abcdef!2sYour%20Hospital%20Location!5e0!3m2!1sen!2sbd!4v1696244052648!5m2!1sen!2sbd" 
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+<div class="map-container">
+  <h3>Find Me Here</h3>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934388.4009184035!2d90.43312811512439!3d23.820210158875927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3756ab2255555555%3A0xabc39a67d86adaf8!2z4Kao4Ka-4Ka44Ka_4Kaw4Kao4KaX4KawIOCmhuCmp-CngeCmqOCmv-CmlSDgprngpr7gprjgpqrgpr7gpqTgpr7gprIg4Kaq4KeN4Kaw4Ka-4KaDIOCmsuCmv-Cmgw!5e0!3m2!1sen!2sbd!4v1759572339650!5m2!1sen!2sbd" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
   </div>
 </section>
 
 
-  <!-- Where footer will appear -->
-<div id="footer"></div>
+  <!--footer-->
+<footer>
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- Column 1: About Doctor -->
+        <div class="col-lg-5 col-md-12">
+          <h5>Dr. Md Makbul Hossain</h5>
+          <p>
+            Specialist in Pediatric Cardiology & Neonatology, providing <br>compassionate and expert care for your little ones' hearts.
+          </p>
+          <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/DrMakbul/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/8801782662665" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact & Location -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Contact & Location</h5>
+          <ul class="list-unstyled">
+            <li class="d-flex">
+              <i class="bi bi-geo-alt-fill me-3 mt-1" style="flex-shrink: 0;"></i>
+              <span><strong>Nasirnagar Modern Hospital</strong><br>Bachchalla, Hospital Road, Nasirnagar Sadar, Brahmanbaria</span>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-telephone-fill me-3 mt-1" style="flex-shrink: 0;"></i>
+              <a href="tel:+8801782662665">01782-662 665</a>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-envelope-fill me-3 mt-1" style="flex-shrink: 0;"></i>
+              <a href="mailto:drmmhmukul@gmail.com">drmmhmukul@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+    
+    <!-- Copyright Sub-footer -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Dr. Md Makbul Hossain | All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-<!-- Load footer.html -->
-<script>
-  fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      once: true
     });
-</script>
+  </script>
 </body>
 </html>
